@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-dark: #050505;
+  --color-dark-surface: #111111;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --font-sans: "Inter", "Noto Sans SC", system-ui, sans-serif;
+  --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, "Noto Sans SC", serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", "Noto Sans SC", monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-dark);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Hide scrollbar for clean look but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-dark-surface);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.glass-panel {
+  background: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-pill {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 100px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.nav-pill:hover {
+  background: white;
+  color: black;
+}
